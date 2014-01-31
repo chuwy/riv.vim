@@ -267,7 +267,7 @@ fun! riv#load_conf() "{{{1
     call riv#ptn#init()
 
     " Configs: "{{{
-    let s:t.time_fmt  = "%Y-%m-%d"
+    let s:t.time_fmt  = "%d.%m.%Y"
     let s:t.sect_punc = '!"#$%&''()*+,-./:;<=>?@[\]^_`{|}~'
     let s:t.list_lvs  =  ["*","+","-"]
     let s:t.highlight_code = riv#ptn#norm_list(split(g:riv_highlight_code,','))

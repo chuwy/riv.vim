@@ -164,7 +164,7 @@ endfun "}}}
 "}}}
 " scratch "{{{
 fun! riv#create#scratch() "{{{
-    call riv#file#split(riv#path#scratch_path() . strftime("%Y-%m-%d") . riv#path#ext())
+    call riv#file#split(riv#path#scratch_path() . strftime("%d.%m.%Y") . riv#path#ext())
 endfun "}}}
 fun! s:format_src_index() "{{{
     " category scratch by month and format it 4 items a line
@@ -180,7 +180,7 @@ fun! s:format_src_index() "{{{
     " which contains month dict, which contains days list
     let years = {}
     for date in dates
-        let [_,year,month,day;rest] = matchlist(date, '\(\d\{4}\)-\(\d\{2}\)-\(\d\{2}\)')
+        let [_,day,month,year;rest] = matchlist(date, '\(\d\{2}\)\.\(\d\{2}\)\.\(\d\{4}\)')
         if !has_key(years, year)
             let years[year] = {}
         endif
@@ -297,7 +297,7 @@ fun! riv#create#date(...) "{{{
     if a:0 && a:1 == 1
         exe "normal! a" . strftime('%H:%M:%S') . "\<ESC>"
     else
-        exe "normal! a" . strftime('%Y-%m-%d') . "\<ESC>"
+        exe "normal! a" . strftime('%d.%m.%Y') . "\<ESC>"
     endif
 endfun "}}}
 fun! riv#create#auto_mkdir() "{{{

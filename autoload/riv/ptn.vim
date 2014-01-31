@@ -232,10 +232,10 @@ fun! riv#ptn#init() "{{{
 
     "}}}3
     " Todo Items: "{{{3
-    " - [x] 2012-03-04 ~ 2012-05-06 The Todo Timestamp with start and end.
-    " - [x] [#A] 2012-03-04 ~ 2012-05-06 Piority
-    " - TODO 2012-01-01
-    " - DONE 2012-01-01 ~ 2012-01-02 
+    " - [x] 12.12.2014 ~ 11.01.2015 The Todo Timestamp with start and end.
+    " - [x] [#A] 12.12.2011 ~ 12.11.2013 Piority
+    " - TODO 20.12.2014
+    " - DONE 02.12.2011 ~ 11.12.2015
     
     " Generate keywords "{{{
     let td_key_list  = split(g:riv_todo_keywords,';')
@@ -278,8 +278,8 @@ fun! riv#ptn#init() "{{{
     let td_prior3 = '\[#'.s:t.prior_str[2].'\]%( |$)'
 
     let td_list = printf('(^\s*%s\s+)', all_list )
-    let td_tms = '(\d{4}-\d{2}-\d{2}%( |$))'
-    let td_tms_end = '(\~ \d{4}-\d{2}-\d{2}%( |$))'
+    let td_tms = '(\d{2}.\d{2}.\d{4}%( |$))'
+    let td_tms_end = '(\~ \d{2}.\d{2}.\d{4}%( |$))'
     
     let s:p.td_keywords = '\v\C%('.td_keywords.')'
 
