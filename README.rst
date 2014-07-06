@@ -2,10 +2,15 @@
 Riv: reStructuredText in Vim
 ############################
 
+**Your Personal Wiki in RST, And More**
+
 :Author: Rykka G.F
-:Update: 2013-04-12
+:Update: 2014-06-24
 :Version: 0.75 
 :Github: https://github.com/Rykka/riv.vim
+
+
+:NOTE: Currently in rebuilding process.
 
 * _`Index`:
 
@@ -25,6 +30,10 @@ Intro
 
 It is a plugin for the `Vim text editor`_, which aims to provide better support
 for reStructuredText_  (a simple and powerful plain text markup) in Vim.
+
+In Short, It can be your Personal Wiki,
+Also can be your Document Writer,
+Even with your code doc writer. 
 
 Riv will help you in the following ways:
 
